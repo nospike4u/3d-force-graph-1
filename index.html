@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Force Graph</title>
+    <script src="//unpkg.com/3d-force-graph"></script>
+    <link rel="stylesheet" href="./src/3d-force-graph.css" />
+  </head>
+  <div class="container">
+    <body>
+      <h3 class="search-h3">Search for your Employee</h3>
+      <input
+        type="search"
+        placeholder="Search employee, skills, department..."
+        style="width: 400px"
+      />
+
+      <div id="3d-graph"></div>
+
+      <script>
+        // Ensure the DOM is fully loaded before running the script
+        document.addEventListener("DOMContentLoaded", () => {
+          const myGraph = ForceGraph3D();
+          myGraph(document.getElementById("3d-graph"))
+            .graphData({
+              nodes: [{ id: "node1" }, { id: "node2" }, { id: "node3" }],
+              links: [
+                { source: "node1", target: "node2" },
+                { source: "node2", target: "node3" },
+              ],
+            })
+            .width(window.innerWidth * 0.5)
+            .height(window.innerHeight * 0.5)
+            .backgroundColor(window.backgroundColor = '#9898');
+        });
+      </script>
+    </body>
+  </div>
+</html>

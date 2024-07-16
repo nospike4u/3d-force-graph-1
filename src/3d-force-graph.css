@@ -25,3 +25,27 @@
   cursor: -moz-grabbing;
   cursor: -webkit-grabbing;
 }
+
+input {
+  max-width: 70%;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-bottom: 2rem;
+}
+
+.search-h3 {
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  text-align: center;
+}
+#3d-graph {
+  width: 50vw;
+  height: 50vh;
+}
